@@ -1,0 +1,188 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* My CSS */
+
+body {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: palegoldenrod;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
+
+.flex_centre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#form_container {
+  background-color: white;
+  height: 80%;
+  width: 40%;
+  border: 3px solid black;
+  border-radius: 10px;
+  display: grid;
+  grid-template-rows: 1fr 6fr;
+}
+
+#form_title {
+  grid-column: 1 / 2;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  grid-template-rows: repeat(6, 1fr);
+}
+
+.wrapper {
+  grid-column: 1 / 2;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  padding: 2.5%;
+}
+
+.error_wrapper {
+  grid-column: 2 / 3;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
+}
+
+.spacer {
+  height: 100%;
+  grid-row: 1 / 2;
+}
+
+.error {
+  grid-row: 2 / 3;
+  color: crimson;
+  font-size: 0.8em;
+  display: flex;
+  align-items: start;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+#password_first_error, #password_second_error {
+  font-size: clamp(0.4rem, 0.5rem, 1rem);
+}
+
+.error.active {
+  display: flex;
+}
+
+.error {
+  display: none;
+}
+
+.label {
+  grid-row: 1 / 2;
+  font-size: 1.25rem;
+}
+
+.input {
+  grid-row: 2 / 3;
+}
+
+#button_wrapper {
+  grid-column: 1 / 2;;
+  display: flex;
+  justify-content: end;
+  gap: 2.5%;
+  padding-top: 2.5%;
+  padding-right: 2.5%;
+}
+
+button {
+  height: 35%;
+}
+
+input, select {
+  appearance: none;
+  width: 100%;
+  height: 100%;
+  padding-left: 2.5%;
+  border-radius: 5px;
+  border: 1px solid palegoldenrod;
+  background-color: white;
+  font-size: 1rem;
+}
+
+input:focus, select:focus {
+  outline: 2px solid blue;
+  outline-offset: 2px;
+}
+
+input:invalid, select:invalid {
+  border-color: firebrick;
+}
+
+input:valid, select:valid {
+  border-color: darkseagreen;
+}

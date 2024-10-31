@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Validation Practice</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="" href="" />
+  </head>
+  <body>
+    <div id="form_container">
+      <div id="form_title" class="flex_centre"><h1>Sign Up Now!</h1></div>
+      <form action="" method="post" id="form" novalidate>
+        <div id="email_wrapper" class="wrapper">
+            <div id="email_label_wrapper" class="label">
+                <div id="email_label" class="label">
+                    <label for="email">Email:</label>
+                </div>
+            </div>
+            <div id="email_input_wrapper" class="input">
+                <input type="text" name="email" id="email" placeholder="email@example.com" required minlength="5" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"></input>
+            </div>
+        </div>
+        <div class="error_wrapper">
+            <div class="spacer"></div>
+            <div id="email_error" class="error" aria-live="polite"></div>
+        </div>
+        
+        <div id="country_wrapper" class="wrapper">
+            <div id="country_label_wrapper" class="label">
+                <label for="country">Country:</label>
+            </div>
+            <div id="country_input_wrapper" class="input">
+                <select name="country" id="country" required></select>
+            </div>
+        </div>
+        <div class="error_wrapper">
+            <div class="spacer"></div>
+            <div id="country_error" class="error" aria-live="polite"></div>
+        </div>
+        <div id="postcode_wrapper" class="wrapper">
+            <div id="postcode_label_wrapper" class="label">
+                <label for="postcode">Postcode:</label>
+            </div>
+            <div id="postcode_input_wrapper" class="input">
+                <input type="text" name="Postcode" id="postcode" placeholder="Enter your postcode" required minlength="3">
+            </div>
+        </div>
+        <div class="error_wrapper">
+            <div class="spacer"></div>
+            <div id="postcode_error" class="error" aria-live="polite"></div>
+        </div>
+        <div id="password_first_wrapper" class="wrapper">
+            <div id="password_first_label_wrapper" class="label">
+                <label for="password_first">Enter password:</label>
+            </div>
+            <div id="password_first_input_wrapper" class="input">
+                <input type="password" name="password_first" id="password_first" placeholder="Enter a password" required minlength="8" pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&*]).{8,}">
+            </div>
+        </div>
+        <div class="error_wrapper">
+            <div class="spacer"></div>
+            <div id="password_first_error" class="error" aria-live="polite"></div>
+        </div>
+        <div id="password_second_wrapper" class="wrapper">
+            <div id="password_second_label_wrapper" class="label">
+                <label for="password_second">Confirm password:</label>
+            </div>
+            <div id="password_second_input_wrapper" class="input">
+                <input type="password" name="password_second" id="password_second" placeholder="Re-enter password" required minlength="8">
+            </div>
+        </div>
+        <div class="error_wrapper">
+            <div class="spacer"></div>
+            <div id="password_second_error" class="error" aria-live="polite"></div>
+        </div>
+        <div id="button_wrapper">
+            <button type="reset">Reset Form</button>
+            <button type="submit">Submit</button>
+        </div>
+        <div class="error_wrapper">
+            <div class="spacer"></div>
+            <div id="submit_button_error" class="error"></div>
+        </div>
+      </form>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
