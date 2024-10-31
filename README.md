@@ -1,6 +1,3 @@
-# validation-practice
-Form Validation Practice
-
 # Validation Practice Form
 
 This is a mini-project focused on building a responsive form with enhanced client-side validation using HTML, CSS, and JavaScript. The project covers various form input types and validations, providing custom feedback to users when incorrect information is submitted.
